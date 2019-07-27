@@ -5,9 +5,8 @@ module.exports = {
     jest: true
   },
   extends: [
-    'airbnb-base',
-    'eslint:recommended',
     'plugin:vue/recommended',
+    '@vue/airbnb',
     '@vue/prettier'
   ],
   rules: {
