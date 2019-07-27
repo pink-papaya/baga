@@ -8,19 +8,19 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import ProductDetail from '@/components/ProductDetail'
+import { mapGetters } from 'vuex';
+import ProductDetail from '@/components/ProductDetail.vue';
 
 export default {
   components: { ProductDetail },
   props: {
-    id: String
+    id: String,
   },
   computed: {
     ...mapGetters('products', ['getProductById']),
     currentProduct() {
-      return this.getProductById(this.id)
-    }
-  }
-}
+      return this.getProductById(this.id);
+    },
+  },
+};
 </script>

@@ -14,25 +14,25 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from 'vuex';
 
 export default {
   head: function() {
     return {
       title: {
-        inner: 'Home'
+        inner: 'Home',
       },
       meta: [
         {
           name: 'description',
           content: `${this.appTitle} home page`,
-          id: 'desc'
-        }
-      ]
-    }
+          id: 'desc',
+        },
+      ],
+    };
   },
-  computed: mapState('app', ['appTitle'])
-}
+  computed: mapState('app', ['appTitle']),
+};
 </script>
 
 <style lang="scss" scoped>

@@ -20,22 +20,22 @@
   </div>
 </template>
 <script>
-import NavBar from '@/components/NavBar'
-import NewContentAvailableToastr from '@/components/NewContentAvailableToastr'
-import AppleAddToHomeScreenModal from '@/components/AppleAddToHomeScreenModal'
-import { mapState, mapActions, mapGetters } from 'vuex'
+import { mapState, mapActions, mapGetters } from 'vuex';
+import NavBar from '@/components/NavBar.vue';
+import NewContentAvailableToastr from '@/components/NewContentAvailableToastr.vue';
+import AppleAddToHomeScreenModal from '@/components/AppleAddToHomeScreenModal.vue';
 
 export default {
   components: { NavBar, NewContentAvailableToastr, AppleAddToHomeScreenModal },
   computed: {
     ...mapGetters('app', ['newContentAvailable']),
-    ...mapState('app', ['showAddToHomeScreenModalForApple', 'refreshingApp'])
+    ...mapState('app', ['showAddToHomeScreenModalForApple', 'refreshingApp']),
   },
   methods: mapActions('app', [
     'closeAddToHomeScreenModalForApple',
-    'serviceWorkerSkipWaiting'
-  ])
-}
+    'serviceWorkerSkipWaiting',
+  ]),
+};
 </script>
 
 <style lang="scss">

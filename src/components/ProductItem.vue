@@ -22,9 +22,9 @@ export default {
     data: Object,
     index: Number,
     isProductDeletionPending: Boolean,
-    disableActions: Boolean
-  }
-}
+    disableActions: Boolean,
+  },
+};
 </script>
 
 <style lang="scss" scoped>

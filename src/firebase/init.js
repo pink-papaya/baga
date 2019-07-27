@@ -1,5 +1,5 @@
-import firebase from 'firebase/app'
-import 'firebase/auth'
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
 // The configuration below is not sensitive data. You can serenely add your config here
 const config = {
@@ -9,7 +9,7 @@ const config = {
   projectId: 'baga-d5af7',
   storageBucket: '',
   messagingSenderId: '1062440756250',
-  appId: '1:1062440756250:web:64de1297a7b9bfc4'
-}
+  appId: '1:1062440756250:web:64de1297a7b9bfc4',
+};
 
-firebase.initializeApp(config)
+firebase.initializeApp(config);

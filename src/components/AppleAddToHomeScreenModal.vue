@@ -23,11 +23,11 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from 'vuex';
 
 export default {
-  computed: mapState('app', ['appTitle'])
-}
+  computed: mapState('app', ['appTitle']),
+};
 </script>
 
 <style lang="scss" scoped>

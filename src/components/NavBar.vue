@@ -34,21 +34,21 @@
 </template>
 
 <script>
-import firebase from 'firebase/app'
-import { mapGetters, mapState } from 'vuex'
+import firebase from 'firebase/app';
+import { mapGetters, mapState } from 'vuex';
 
 export default {
   computed: {
     ...mapGetters('authentication', ['isUserLoggedIn']),
     ...mapState('authentication', ['user']),
-    ...mapState('app', ['networkOnLine', 'appTitle', 'appShortTitle'])
+    ...mapState('app', ['networkOnLine', 'appTitle', 'appShortTitle']),
   },
   methods: {
     async logout() {
-      await firebase.auth().signOut()
-    }
-  }
-}
+      await firebase.auth().signOut();
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

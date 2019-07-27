@@ -7,14 +7,14 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import ProductList from '@/components/ProductList'
-import AddProduct from '@/components/AddProduct'
+import { mapState } from 'vuex';
+import ProductList from '@/components/ProductList.vue';
+import AddProduct from '@/components/AddProduct.vue';
 
 export default {
   components: { ProductList, AddProduct },
-  computed: mapState('app', ['networkOnLine'])
-}
+  computed: mapState('app', ['networkOnLine']),
+};
 </script>
 
 <style lang="scss" scoped>
