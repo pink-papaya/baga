@@ -9,11 +9,16 @@ import '@/firebase/init';
 import '@/firebase/authentication';
 import '@/misc/handle-apple-install-prompt';
 import 'pwacompat';
+import './assets/tailwind.css'
+import vuetify from './plugins/vuetify';
+import 'roboto-fontface/css/roboto/roboto-fontface.css'
+import '@mdi/font/css/materialdesignicons.css'
 
 Vue.config.productionTip = false;
 
 new Vue({
   router,
   store,
-  render: h => h(App),
+  vuetify,
+  render: h => h(App)
 }).$mount('#app');
