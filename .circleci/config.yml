@@ -14,7 +14,7 @@ jobs:
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
+            - dependency-cache-{{ checksum "yarn.lock" }}
 
       - run:
           name: Install dependencies
@@ -23,9 +23,8 @@ jobs:
       - save_cache:
           name: Save Yarn Package Cache
           paths:
-            - ~/.cache/yarn
-            - ~/.cache/Cypress
-          key: yarn-packages-{{ checksum "yarn.lock" }}
+            - ~/.cache
+          key: dependency-cache-{{ checksum "yarn.lock" }}
 
       - persist_to_workspace:
           root: .
@@ -65,7 +64,7 @@ jobs:
           at: .
       - restore_cache:
           keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
+            - dependency-cache-{{ checksum "yarn.lock" }}
       - run:
           name: 'Run e2e tests'
           command: yarn test:e2e:headless
