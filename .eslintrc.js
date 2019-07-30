@@ -8,6 +8,7 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'max-lines': ['error', 300],
     'vue/require-default-prop': 'off',
     'import/no-unresolved': 'off',
     'import/no-cycle': 'off',
