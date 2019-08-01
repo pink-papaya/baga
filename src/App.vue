@@ -1,27 +1,54 @@
 <template>
   <div id="app">
-    <nav-bar></nav-bar>
-    <div class="main-wrapper">
-      <router-view />
-    </div>
+    <v-app>
+      <nav-bar></nav-bar>
+      <v-content>
+        <div class="main-wrapper">
+          <router-view />
+        </div>
 
-    <new-content-available-toastr
-      v-if="newContentAvailable"
-      class="new-content-available-toastr"
-      :refreshing-app="refreshingApp"
-      @refresh="serviceWorkerSkipWaiting"
-    ></new-content-available-toastr>
-    <apple-add-to-home-screen-modal
-      v-if="showAddToHomeScreenModalForApple"
-      class="apple-add-to-home-screen-modal"
-      @close="closeAddToHomeScreenModalForApple(false)"
-    >
-    </apple-add-to-home-screen-modal>
+        <new-content-available-toastr
+          v-if="newContentAvailable"
+          class="new-content-available-toastr"
+          :refreshing-app="refreshingApp"
+          @refresh="serviceWorkerSkipWaiting"
+        ></new-content-available-toastr>
+        <apple-add-to-home-screen-modal
+          v-if="showAddToHomeScreenModalForApple"
+          class="apple-add-to-home-screen-modal"
+          @close="closeAddToHomeScreenModalForApple(false)"
+        >
+        </apple-add-to-home-screen-modal>
+      </v-content>
+
+      <v-footer app color="purple lighten-4">
+        <div class="flex justify-center">
+          <div class="flex flex-col items-center">
+            &copy; Baga 2019
+            <div>
+              Logo Icon made by
+              <a
+                rel="noopener"
+                target="_blank"
+                href="https://www.flaticon.com/authors/monkik"
+              >
+                monkik
+              </a>
+              from
+              <a rel="noopener" target="_blank" href="https://www.flaticon.com">
+                www.flaticon.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </v-footer>
+    </v-app>
   </div>
 </template>
+
 <script>
 import { mapState, mapActions, mapGetters } from 'vuex';
-import NavBar from '@/components/NavBar.vue';
+import NavBar from '@/components/NavBar2.vue';
 import NewContentAvailableToastr from '@/components/NewContentAvailableToastr.vue';
 import AppleAddToHomeScreenModal from '@/components/AppleAddToHomeScreenModal.vue';
 

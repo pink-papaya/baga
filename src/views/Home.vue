@@ -1,15 +1,16 @@
 <template>
   <div class="page-wrapper">
     <h1 class="home-page-title">{{ appTitle }}</h1>
-    <img alt="logo-bento" class="logo" src="@/assets/img/bento-starter.svg" />
+    <img alt="logo-bento" class="logo h-64" src="@/assets/img/blueberry.svg" />
 
     <a
       rel="noopener"
       class="documentation-link"
       target="_blank"
       href="https://bento-starter.netlify.com/"
-      >Documentation →</a
     >
+      Documentation →
+    </a>
   </div>
 </template>
 
@@ -17,7 +18,7 @@
 import { mapState } from 'vuex';
 
 export default {
-  head: function() {
+  head() {
     return {
       title: {
         inner: 'Home',
