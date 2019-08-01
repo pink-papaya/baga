@@ -40,13 +40,15 @@ import { mapGetters, mapState } from 'vuex';
 import NavBarUserMenu from '@/components/nav/NavBarUserMenu.vue';
 
 export default {
+  name: 'NavBar',
+
+  components: { NavBarUserMenu },
+
   data() {
     return {
       drawer: null,
     };
   },
-
-  components: { NavBarUserMenu },
 
   computed: {
     ...mapGetters('authentication', ['isUserLoggedIn']),
