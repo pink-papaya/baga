@@ -21,7 +21,7 @@
         </apple-add-to-home-screen-modal>
       </v-content>
 
-      <v-footer app color="purple lighten-4">
+      <v-footer app absolute color="purple lighten-4">
         <div class="flex justify-center">
           <div class="flex flex-col items-center">
             &copy; Baga 2019
