@@ -55,9 +55,13 @@ jobs:
           at: .
       - run:
           name: Run unit tests
-          command: yarn test:unit --ci --reporters="default" --reporters="jest-junit"
+          command: yarn test:unit --ci --runInBand --reporters="default" --reporters="jest-junit"
           environment:
-            JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
+            JEST_JUNIT_OUTPUT: 'reports/junit/js-test-results.xml'
+      - store_test_results:
+          path: reports/junit
+      - store_artifacts:
+          path: reports/junit
 
   run-e2e-tests:
     executor: default-executor
